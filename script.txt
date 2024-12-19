@@ -1,0 +1,24 @@
+<script>
+        // Disable Right-Click
+        document.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+        });
+      
+        // Disable Keyboard Shortcuts
+        document.addEventListener('keydown', function(e) {
+          // Disable F12 Key
+          if (e.keyCode == 123) { 
+            e.preventDefault();
+          }
+      
+          // Disable Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+          if (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74 || e.keyCode == 67)) { 
+            e.preventDefault();
+          }
+      
+          // Disable Ctrl+U (View Source)
+          if (e.ctrlKey && e.keyCode == 85) { 
+            e.preventDefault();
+          }
+        });
+      </script>
